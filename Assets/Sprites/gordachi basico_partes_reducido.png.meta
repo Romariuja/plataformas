@@ -1,0 +1,266 @@
+fileFormatVersion: 2
+guid: cc4073b8bef755a49ab26a650d81f6db
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Cuerpo
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 694
+        width: 256
+        height: 321
+      alignment: 9
+      pivot: {x: .655419886, y: .0725907683}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cabeza
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 761
+        width: 245
+        height: 263
+      alignment: 9
+      pivot: {x: .354401767, y: .23394984}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: guitarra
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 184
+        width: 152
+        height: 510
+      alignment: 9
+      pivot: {x: .472921163, y: .354731172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cadera
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 479
+        width: 154
+        height: 206
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mandibula
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 639
+        width: 85
+        height: 98
+      alignment: 9
+      pivot: {x: .193321317, y: .150003865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: espinilla_izq
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 535
+        width: 200
+        height: 98
+      alignment: 9
+      pivot: {x: .115844578, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dedo1
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 501
+        width: 51
+        height: 21
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: dedo2
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 497
+        width: 48
+        height: 25
+      alignment: 4
+      pivot: {x: 0, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: muslo_der
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 352
+        width: 112
+        height: 113
+      alignment: 9
+      pivot: {x: .414251059, y: .815677583}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hueso_brazo_izq
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 416
+        width: 99
+        height: 75
+      alignment: 9
+      pivot: {x: .228664026, y: .41425094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pie_izq_arriba
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 404
+        width: 121
+        height: 87
+      alignment: 9
+      pivot: {x: .205193385, y: .752318978}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: espinilla_der
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 175
+        width: 109
+        height: 175
+      alignment: 9
+      pivot: {x: .688805282, y: .868475676}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: antebrazo_der_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 146
+        width: 103
+        height: 254
+      alignment: 9
+      pivot: {x: .486679822, y: .111091129}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: antebrazo_izq
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 221
+        width: 93
+        height: 157
+      alignment: 9
+      pivot: {x: .647524595, y: .849549711}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hueso_brazo_der
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 118
+        width: 110
+        height: 65
+      alignment: 9
+      pivot: {x: .825383782, y: .500000238}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Antebrazo_der_1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 11
+        width: 92
+        height: 157
+      alignment: 9
+      pivot: {x: .261393994, y: .840811253}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Muslo_izq
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 75
+        width: 93
+        height: 100
+      alignment: 9
+      pivot: {x: .426236868, y: .760676861}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: pie_der
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 125
+        height: 54
+      alignment: 9
+      pivot: {x: .148771942, y: .754071712}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pie_izq_arriba
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 3
+        width: 118
+        height: 60
+      alignment: 9
+      pivot: {x: .220952183, y: .728663325}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pie_atras
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 9
+        width: 60
+        height: 107
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bota
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 7
+        width: 95
+        height: 134
+      alignment: 9
+      pivot: {x: .283370823, y: .848115563}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Pie_izq
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 61
+        width: 129
+        height: 58
+      alignment: 9
+      pivot: {x: .191569328, y: .712894201}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,33 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SeguirPersonaje.cs">
+    <Files>
+      <File FileName="Assets\Scripts\ControladorJustin.cs" Line="78" Column="17" />
+      <File FileName="Assets\Scripts\ControladorPersonaje.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ControladorJustin.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Bloque_puntos.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CalaveraFuego.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Generador.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ControladorPersonajeMariachi.cs" Line="24" Column="28" />
+      <File FileName="Assets\Scripts\SeguirPersonaje.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Destructor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Item_calavera.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Puntuacion.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Scripts" expanded="True">
+              <Node name="SeguirPersonaje.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

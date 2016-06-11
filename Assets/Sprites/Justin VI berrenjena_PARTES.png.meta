@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 184ea63f1204c204a97f63a6b327f1ad
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Justin VI berrenjena_PARTES_0
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 995
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 792
+        width: 193
+        height: 189
+      alignment: 9
+      pivot: {x: .170658097, y: .130056232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 835
+        width: 156
+        height: 151
+      alignment: 9
+      pivot: {x: .79540509, y: .342144489}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_3
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 884
+        width: 235
+        height: 105
+      alignment: 9
+      pivot: {x: .0942785367, y: .696742475}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_4
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 882
+        width: 104
+        height: 86
+      alignment: 9
+      pivot: {x: .301365197, y: .148925066}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_6
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 755
+        width: 93
+        height: 81
+      alignment: 9
+      pivot: {x: .807563365, y: .794273078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_7
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 775
+        width: 101
+        height: 41
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_9
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 666
+        width: 141
+        height: 200
+      alignment: 9
+      pivot: {x: .297139049, y: .929049969}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 627
+        width: 222
+        height: 158
+      alignment: 9
+      pivot: {x: .807793856, y: .781608105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_11
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 435
+        width: 257
+        height: 293
+      alignment: 9
+      pivot: {x: .54328233, y: .142051309}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 169
+        height: 203
+      alignment: 9
+      pivot: {x: .56581986, y: .87574172}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_13
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 404
+        width: 182
+        height: 209
+      alignment: 9
+      pivot: {x: .831784785, y: .0970285237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_14
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 219
+        width: 212
+        height: 138
+      alignment: 9
+      pivot: {x: .500000119, y: .838789105}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_15
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 142
+        width: 150
+        height: 244
+      alignment: 9
+      pivot: {x: .224560544, y: .845167816}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_16
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 35
+        width: 172
+        height: 138
+      alignment: 9
+      pivot: {x: .666298449, y: .810905993}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_17
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 125
+        width: 186
+        height: 113
+      alignment: 9
+      pivot: {x: .739215672, y: .837501884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Justin VI berrenjena_PARTES_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 453
+        width: 155
+        height: 171
+      alignment: 9
+      pivot: {x: .448739588, y: .8717134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
