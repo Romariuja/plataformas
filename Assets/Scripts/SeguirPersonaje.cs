@@ -74,7 +74,7 @@ public class SeguirPersonaje : MonoBehaviour {
 	void PersonajeCambio(Notification guay)
 	{//Para que el Mariachi mantenga la velocidad del personaje anterior
 		//Vector3 someVectorThree = note.data;
-         personaje2.rigidbody2D.velocity=(Vector2) guay.data;
+         personaje2.GetComponent<Rigidbody2D>().velocity=(Vector2) guay.data;
 		//GetComponent<Rigidbody2D> ().velocity=
 		//GetComponent<Rigidbody2D> ().velocity=new Vector2(30f,30f);
 		//Debug.Log (GetComponent<Rigidbody2D> ().velocity);
@@ -84,7 +84,7 @@ public class SeguirPersonaje : MonoBehaviour {
 	void Update () {
 		if (!fin){
 			//Camera camera = GetComponent<Camera>();
-			Vector3 p = camera.ScreenToWorldPoint(new Vector3(Screen.width-Margen_Justin,Screen.height/2, camera.nearClipPlane));
+			Vector3 p = GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width-Margen_Justin,Screen.height/2, GetComponent<Camera>().nearClipPlane));
 			//Debug.Log(p);//Va diciendo al coordenada que corresponde al final de la pantalla (punto medio de altura)
 			//Debug.Log(posicion);
 			if(Justin){//No actualiza bien la posicion de personaje3

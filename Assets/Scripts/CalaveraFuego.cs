@@ -50,7 +50,7 @@ public class CalaveraFuego : MonoBehaviour {
 		Calavera.GetComponent<Collider2D>().enabled = false;
 		//Calavera.transform.parent = null;
 
-		Calavera.rigidbody2D.isKinematic = false;
+		Calavera.GetComponent<Rigidbody2D>().isKinematic = false;
 		Calavera.GetComponent<Rigidbody2D> ().velocity=new Vector2 (FuerzaCalavera/2, FuerzaCalavera/8);
 		//Invoke("ConCollider",0.1f);
 		Invoke ("ConCollider",0.1f);

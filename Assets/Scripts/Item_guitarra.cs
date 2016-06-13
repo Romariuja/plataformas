@@ -53,7 +53,7 @@ public class Item_guitarra : MonoBehaviour {
 			Guitarra=true;
 			animator.SetBool("ConGuitarra", Guitarra);
 			Invoke ("Autodestruccion", 4f);
-			gameObject.collider2D.enabled=false;
+			gameObject.GetComponent<Collider2D>().enabled=false;
 
 		}
 		//Destroy(gameObject);

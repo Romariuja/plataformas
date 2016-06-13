@@ -44,7 +44,7 @@ public class ControladorPersonaje : MonoBehaviour {
 
 	void Autodestruccion(){
 				if (!destruido) {
-			VelocidadCambio=new Vector2(rigidbody2D.velocity.x, rigidbody2D.velocity.y);
+			VelocidadCambio=new Vector2(GetComponent<Rigidbody2D>().velocity.x, GetComponent<Rigidbody2D>().velocity.y);
 			NotificationCenter.DefaultCenter().PostNotification(this, "PersonajeCambio", VelocidadCambio);
 						Destroy (gameObject);
 						//Debug.Log ("Destruir PErsonaje");
@@ -73,24 +73,24 @@ public class ControladorPersonaje : MonoBehaviour {
 	void FixedUpdate(){
 		if (GetComponent<Rigidbody2D> ().velocity.y > 0.1) {
 			//Debug.Log(GetComponent<Rigidbody2D> ().velocity.y);
-			Pie_izq.gameObject.collider2D.enabled=false;
-			Pie_der.gameObject.collider2D.enabled=false;
+			Pie_izq.gameObject.GetComponent<Collider2D>().enabled=false;
+			Pie_der.gameObject.GetComponent<Collider2D>().enabled=false;
 
 			//(GameObject) Pie_der.collider2D.enabled=false;
 				} else {
-			Pie_izq.gameObject.collider2D.enabled=true;
-			Pie_der.gameObject.collider2D.enabled=true;
+			Pie_izq.gameObject.GetComponent<Collider2D>().enabled=true;
+			Pie_der.gameObject.GetComponent<Collider2D>().enabled=true;
 			//(GameObject) Pie_izq.collider2D.enabled=false;
 			//(GameObject) Pie_der.collider2D.enabled=false;
 				}
 
 		if (corriendo) {
-						rigidbody2D.velocity = new Vector2 (velocidadAcumulada, rigidbody2D.velocity.y);
+						GetComponent<Rigidbody2D>().velocity = new Vector2 (velocidadAcumulada, GetComponent<Rigidbody2D>().velocity.y);
 						velocidadAcumulada= velocidadAcumulada + 0.05f;
 				} else
 			NotificationCenter.DefaultCenter().PostNotification(this, "PersonajePara");
 						velocidadAcumulada = velocidad;
-		animator.SetFloat ("Velx", rigidbody2D.velocity.x);
+		animator.SetFloat ("Velx", GetComponent<Rigidbody2D>().velocity.x);
 		enSuelo = Physics2D.OverlapCircle (ComprobadorSuelo.position, ComprobadorRadio, MascaraSuelo);
 		animator.SetBool("isGrounded", enSuelo);
 		animator.SetBool ("MariachiMode", guitarra);
@@ -108,7 +108,7 @@ public class ControladorPersonaje : MonoBehaviour {
 		//Debug.Log("Before Waiting 2 seconds");
 		yield return new WaitForSeconds(0.1f);
 		GetComponent<AudioSource>().Play ();
-		GetComponent<Rigidbody2D>().velocity=new Vector2(rigidbody2D.velocity.x, fuerzaSalto);
+		GetComponent<Rigidbody2D>().velocity=new Vector2(GetComponent<Rigidbody2D>().velocity.x, fuerzaSalto);
 		//Debug.Log("After Waiting 2 Seconds");
 	}
 	//PARA LLAMAR AL CODIGO ANTERIO DE PAUSA ES NECESARIO ESTA ORDEN
@@ -134,7 +134,7 @@ public class ControladorPersonaje : MonoBehaviour {
 						Ritmo = false;
 						chocando = true;
 				} else {
-			Velocidad_ant=rigidbody2D.velocity.x;
+			Velocidad_ant=GetComponent<Rigidbody2D>().velocity.x;
 				}
 		//	NotificationCenter.DefaultCenter ().PostNotification (this, "GolpeContraPlataforma");
 		//	}
@@ -198,7 +198,7 @@ public class ControladorPersonaje : MonoBehaviour {
 				
 				//FALTA PROGRAMAR COMO REBOTA CON ESTO
 				//rigidbody2D.velocity=new Vector2(-velocidad,-rigidbody2D.velocity.y);
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-FuerzaGolpe, rigidbody2D.velocity.y);
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-FuerzaGolpe, GetComponent<Rigidbody2D>().velocity.y);
 				
 				corriendo=false;
 				Ritmo=false;

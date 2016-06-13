@@ -80,13 +80,13 @@ public class ControladorJustin : MonoBehaviour {
 		//}
 		if (GetComponent<Rigidbody2D> ().velocity.y > 0.1) {
 			//Debug.Log(GetComponent<Rigidbody2D> ().velocity.y);
-			Pie_izq.gameObject.collider2D.enabled=false;
-			Pie_der.gameObject.collider2D.enabled=false;
+			Pie_izq.gameObject.GetComponent<Collider2D>().enabled=false;
+			Pie_der.gameObject.GetComponent<Collider2D>().enabled=false;
 			
 			//(GameObject) Pie_der.collider2D.enabled=false;
 		} else {
-			Pie_izq.gameObject.collider2D.enabled=true;
-			Pie_der.gameObject.collider2D.enabled=true;
+			Pie_izq.gameObject.GetComponent<Collider2D>().enabled=true;
+			Pie_der.gameObject.GetComponent<Collider2D>().enabled=true;
 			//(GameObject) Pie_izq.collider2D.enabled=false;
 			//(GameObject) Pie_der.collider2D.enabled=false;
 		}
@@ -100,13 +100,13 @@ public class ControladorJustin : MonoBehaviour {
 		if (DecisionCantar > 3 && !Onfire) {
 						cantar = true;
 				} else if (Onfire) {
-			rigidbody2D.velocity = new Vector2 (0, 0);
+			GetComponent<Rigidbody2D>().velocity = new Vector2 (0, 0);
 
 		}
 		else {
 			cantar = false;
 			VelocidadReal=DecisionSentido * velocidad;
-						rigidbody2D.velocity = new Vector2 (VelocidadReal, rigidbody2D.velocity.y);
+						GetComponent<Rigidbody2D>().velocity = new Vector2 (VelocidadReal, GetComponent<Rigidbody2D>().velocity.y);
 						//velocidadAcumulada = velocidadAcumulada + 0.05f;
 						if (DecisionSalto > 2) {
 				preSalto=true;
@@ -117,7 +117,7 @@ public class ControladorJustin : MonoBehaviour {
 				}
 			
 	
-		animator.SetFloat ("VelxJ", Mathf.Abs(rigidbody2D.velocity.x));
+		animator.SetFloat ("VelxJ", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
 		animator.SetBool("preSaltoJ", preSalto);
 		enSuelo = Physics2D.OverlapCircle (ComprobadorSuelo.position, ComprobadorRadio, MascaraSuelo);
 		animator.SetBool("isGroundedJ", enSuelo);
@@ -134,7 +134,7 @@ public class ControladorJustin : MonoBehaviour {
 						//Debug.Log ("Entra aqui");
 						yield return new WaitForSeconds (0.3f);
 						//GetComponent<AudioSource> ().Play ();
-						GetComponent<Rigidbody2D> ().velocity = new Vector2 (rigidbody2D.velocity.x, fuerzaSalto);
+						GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D>().velocity.x, fuerzaSalto);
 			preSalto=false;		
 		}
 

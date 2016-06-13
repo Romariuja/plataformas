@@ -36,7 +36,7 @@ public class Scroll : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (enMovimiento && !para) {
-			renderer.material.mainTextureOffset = new Vector2 (velocidad*transform.position.x/100, 0);
+			GetComponent<Renderer>().material.mainTextureOffset = new Vector2 (velocidad*transform.position.x/100, 0);
 		}
 	}
 }
