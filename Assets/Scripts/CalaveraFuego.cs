@@ -7,7 +7,7 @@ public class CalaveraFuego : MonoBehaviour {
 	public GameObject Calavera2;
 	private Animator animator;
 	private bool Fuego = false;
-	private float FuerzaCalavera=100;
+	private float FuerzaCalavera=30;
 	private Vector3 posicion;
 	//private bool follow= true;
 	//Use this for initialization
@@ -47,13 +47,18 @@ public class CalaveraFuego : MonoBehaviour {
 		//Calavera2.transform.parent = null;
 
 		Calavera = (GameObject) Instantiate (Calavera2, posicion,  Quaternion.Euler(0, 0, 0));
-		Calavera.GetComponent<Collider2D>().enabled = false;
-		//Calavera.transform.parent = null;
+
+
+        //Calavera.GetComponent<Collider2D>().enabled = false;
+		
+        
+        //Calavera.transform.parent = null;
 
 		Calavera.GetComponent<Rigidbody2D>().isKinematic = false;
 		Calavera.GetComponent<Rigidbody2D> ().velocity=new Vector2 (FuerzaCalavera/2, FuerzaCalavera/8);
 		//Invoke("ConCollider",0.1f);
-		Invoke ("ConCollider",0.1f);
+		
+        //Invoke ("ConCollider",0.1f);
 	}
 	void ConCollider(){
 		Calavera.GetComponent<Collider2D>().enabled = true;
@@ -75,11 +80,19 @@ public class CalaveraFuego : MonoBehaviour {
 //		animator.SetBool ("Fuego", Fuego);	
 		}
 
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        Debug.Log(coll);
+        Destroy(gameObject);
+    }
 
-
-void OnTriggerEnter2D(Collider2D other){
-	if (other.tag == "Suelo") {
+        void OnTriggerEnter2D(Collider2D other){
+        Debug.Log(other);
+        Debug.Log(other.tag);
+       // Time.timeScale = 0;
+        if (other.tag == "Suelo") {
 		Destroy(gameObject);
+           
 	}
 }
 }

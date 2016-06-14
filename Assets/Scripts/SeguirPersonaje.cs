@@ -95,9 +95,9 @@ public class SeguirPersonaje : MonoBehaviour {
 			}
 				else if (!guitarra) {
 						posicion = new Vector3 (personaje.position.x, personaje.position.y, personaje.position.z);
-				Debug.Log (posicion);	
+				//Debug.Log (posicion);	
 				posicion=new Vector3 (personaje.position.x + separacion, transform.position.y, transform.position.z);
-				Debug.Log (posicion);
+			//	Debug.Log (posicion);
 				transform.position = new Vector3 (personaje.position.x + separacion, transform.position.y, transform.position.z);
 				//transform.position = new Vector3 (personaje.position.x + separacion, personaje.position.y-separacion, transform.position.z);
 				} else {//Estado MAriachi
