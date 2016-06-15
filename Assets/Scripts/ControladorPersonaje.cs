@@ -46,8 +46,9 @@ public class ControladorPersonaje : MonoBehaviour {
 				if (!destruido) {
 			VelocidadCambio=new Vector2(GetComponent<Rigidbody2D>().velocity.x, GetComponent<Rigidbody2D>().velocity.y);
 			NotificationCenter.DefaultCenter().PostNotification(this, "PersonajeCambio", VelocidadCambio);
-						Destroy (gameObject);
-						//Debug.Log ("Destruir PErsonaje");
+            //	Destroy (gameObject);
+            gameObject.active = false;			
+            //Debug.Log ("Destruir PErsonaje");
 			destruido=true;
 				}
 		}

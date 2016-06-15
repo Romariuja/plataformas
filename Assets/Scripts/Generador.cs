@@ -51,6 +51,7 @@ public class Generador : MonoBehaviour {
 			if (transform.position.x>XMinima && !JustinondaJaus){
 			Nuevo= (GameObject) Instantiate (obj [Random.Range (0, obj.Length)], transform.position, Quaternion.identity);
 				//Debug.Log (obj);
+                //Aparece Justin
 				if (Nuevo.tag == "Justin"){
 					JustinondaJaus= true;
 					Todos_Justin = GameObject.FindGameObjectsWithTag("Justin");

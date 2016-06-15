@@ -23,7 +23,8 @@ public class SeguirPersonaje : MonoBehaviour {
 	void Start () {
 		NotificationCenter.DefaultCenter().AddObserver(this,"PillaGuitarra");
 		NotificationCenter.DefaultCenter().AddObserver(this,"PersonajeMuere");
-		NotificationCenter.DefaultCenter().AddObserver(this,"PersonajeCambio");
+        NotificationCenter.DefaultCenter().AddObserver(this, "JustinMuere");
+        NotificationCenter.DefaultCenter().AddObserver(this,"PersonajeCambio");
 		NotificationCenter.DefaultCenter().AddObserver(this,"JustinAparece");
 	}
 	void PillaGuitarra(){
@@ -34,14 +35,18 @@ public class SeguirPersonaje : MonoBehaviour {
 	void PersonajeMuere(){
 		fin=true;
 	}
-	void JustinAparece(Notification notificacion){
+    void JustinMuere(){
+        fin = true;
+    }
+
+    void JustinAparece(Notification notificacion){
 		if (!Justin) {
 						 
 						Camera camera = GetComponent<Camera> ();
 						Vector3 p = camera.ScreenToWorldPoint (new Vector3 (Screen.width, Screen.height / 2, camera.nearClipPlane + Margen_Justin));
 			posicionj=p + new Vector3 (-Margen_Justin,0,0);			
 			//personaje3 = (Transform) Instantiate (personaje3, posicionj,  Quaternion.Euler(0, 0, 0));
-						personaje3 = (Transform)Instantiate (personaje3, p, Quaternion.Euler (0, 0, 0));
+						personaje3 = (Transform)Instantiate (personaje3, posicionj, Quaternion.Euler (0, 0, 0));
 						Justin = true;
 				}
 //		personaje3 = (Transform) GameObject.FindGameObjectsWithTag("Justin");
@@ -84,19 +89,23 @@ public class SeguirPersonaje : MonoBehaviour {
 	void Update () {
 		if (!fin){
 			//Camera camera = GetComponent<Camera>();
-			Vector3 p = GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width-Margen_Justin,Screen.height/2, GetComponent<Camera>().nearClipPlane));
+			//Vector3 p = GetComponent<Camera>().ScreenToWorldPoint(new Vector3(3*Screen.width/4,Screen.height/2, GetComponent<Camera>().nearClipPlane));
 			//Debug.Log(p);//Va diciendo al coordenada que corresponde al final de la pantalla (punto medio de altura)
 			//Debug.Log(posicion);
 			if(Justin){//No actualiza bien la posicion de personaje3
 				//Debug.Log (personaje3.position.x);
 				posicionj = new Vector3 (personaje3.position.x, personaje3.position.y, personaje3.position.z);
-				transform.position = Vector3.Lerp(this.transform.position, new Vector3(personaje3.position.x + separacion, transform.position.y, transform.position.z),0.05f);
-			//	transform.position = new Vector3 (personaje3.position.x + separacion, transform.position.y, transform.position.z);
-			}
-				else if (!guitarra) {
+                //transform.position = Vector3.Lerp(this.transform.position, new Vector3(personaje3.position.x + separacion, transform.position.y, transform.position.z),0.05f);
+//                transform.position = Vector3.Lerp(this.transform.position, new Vector3(personaje3.position.x + separacion, transform.position.y, transform.position.z), 0.05f);
+                transform.position = Vector3.Lerp(this.transform.position, new Vector3((personaje3.position.x+posicion.x)/2, transform.position.y, transform.position.z), 0.05f);
+
+                Justin = false;
+                //	transform.position = new Vector3 (personaje3.position.x + separacion, transform.position.y, transform.position.z);
+            }
+            else if (!guitarra) {
 						posicion = new Vector3 (personaje.position.x, personaje.position.y, personaje.position.z);
 				//Debug.Log (posicion);	
-				posicion=new Vector3 (personaje.position.x + separacion, transform.position.y, transform.position.z);
+				//posicion=new Vector3 (personaje.position.x + separacion, transform.position.y, transform.position.z);
 			//	Debug.Log (posicion);
 				transform.position = new Vector3 (personaje.position.x + separacion, transform.position.y, transform.position.z);
 				//transform.position = new Vector3 (personaje.position.x + separacion, personaje.position.y-separacion, transform.position.z);

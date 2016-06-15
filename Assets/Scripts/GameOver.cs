@@ -5,10 +5,12 @@ public class GameOver : MonoBehaviour {
 	public AudioClip GameOverClip;
 
 	public GameObject CamaraGameOver;
-	// Use this for initialization
-	void Start () {
+    public GameObject CamaraGameWinner;
+    // Use this for initialization
+    void Start () {
 	NotificationCenter.DefaultCenter ().AddObserver (this, "PersonajeMuere");
-	}
+        NotificationCenter.DefaultCenter().AddObserver(this, "JustinMuere");
+    }
 	void PersonajeMuere(Notification notificacion){
 		GetComponent<AudioSource>().Stop ();
 		GetComponent<AudioSource>().clip = GameOverClip;
@@ -19,8 +21,20 @@ public class GameOver : MonoBehaviour {
 
 	}
 
-	// Update is called once per frame
-	void Update () {
+
+    void JustinMuere(Notification notificacion)
+    {
+        GetComponent<AudioSource>().Stop();
+        GetComponent<AudioSource>().clip = GameOverClip;
+        GetComponent<AudioSource>().loop = false;
+        GetComponent<AudioSource>().volume = 0.05f;
+        GetComponent<AudioSource>().Play();
+        CamaraGameWinner.SetActive(true);
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 	
 	}
 }

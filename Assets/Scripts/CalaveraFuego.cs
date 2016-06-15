@@ -7,7 +7,7 @@ public class CalaveraFuego : MonoBehaviour {
 	public GameObject Calavera2;
 	private Animator animator;
 	private bool Fuego = false;
-	private float FuerzaCalavera=30;
+	private float FuerzaCalavera=100;
 	private Vector3 posicion;
 	//private bool follow= true;
 	//Use this for initialization
@@ -82,13 +82,13 @@ public class CalaveraFuego : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log(coll);
+       // Debug.Log(coll);
         Destroy(gameObject);
     }
 
         void OnTriggerEnter2D(Collider2D other){
-        Debug.Log(other);
-        Debug.Log(other.tag);
+       // Debug.Log(other);
+        //Debug.Log(other.tag);
        // Time.timeScale = 0;
         if (other.tag == "Suelo") {
 		Destroy(gameObject);
