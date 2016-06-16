@@ -3,6 +3,11 @@ using System.Collections;
 
 public class ControladorJustin : MonoBehaviour {
 
+    Vector3 p;
+    Vector3 q;
+    private float anchura_pantalla;
+    private float distancia;
+    private int vidas = 3;
 	private float fuerzaSalto0 = 100f;
 	private float FuerzaGolpe = 100f;
 	private float fuerzaSalto ;
@@ -48,9 +53,12 @@ public class ControladorJustin : MonoBehaviour {
 
 	void Autodestruccion(){
 				if (!destruido) {
-					Destroy (gameObject);
-		//				Debug.Log ("Destruir PErsonaje");
-			destruido=true;
+
+            //Destroy (gameObject);
+            gameObject.active = false;
+            NotificationCenter.DefaultCenter().PostNotification(this, "JustinMuere");
+            //				Debug.Log ("Destruir PErsonaje");
+            destruido =true;
 				}
 		}
 	IEnumerator MyMethod(AudioClip Pachanga, float espera) {
@@ -75,10 +83,17 @@ public class ControladorJustin : MonoBehaviour {
 	//}
 	//FUNCION QUE COMRPUEBA LAS VARIABLES Y ACTUALIZA CADA CIERTO TIEMPO
 	void FixedUpdate(){
-		//if (transform.position.){
+        distancia = Camera.main.gameObject.transform.position.x - gameObject.transform.position.x;
+        p = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
+        q=  Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
+        anchura_pantalla = p.x - q.x;
 
-		//}
-		if (GetComponent<Rigidbody2D> ().velocity.y > 0.1) {
+        // Debug.Log(gameObject.transform.position.x);
+        //Debug.Log(Camera.main.gameObject.transform.position.x);
+      //  Debug.Log(distancia);
+            //Debug.Log(anchura_pantalla/2);
+        //}
+        if (GetComponent<Rigidbody2D> ().velocity.y > 0.1) {
 			//Debug.Log(GetComponent<Rigidbody2D> ().velocity.y);
 			Pie_izq.gameObject.GetComponent<Collider2D>().enabled=false;
 			Pie_der.gameObject.GetComponent<Collider2D>().enabled=false;
@@ -91,30 +106,51 @@ public class ControladorJustin : MonoBehaviour {
 			//(GameObject) Pie_der.collider2D.enabled=false;
 		}
 
-		if (Time.time > n*TiempoDecision && !Onfire) {
-						DecisionSentido = Random.Range (-1, 3);
-						DecisionSalto = Random.Range (0, 5);
-						DecisionCantar = Random.Range (0, 5);
-			n++;
-				}
-		if (DecisionCantar > 3 && !Onfire) {
-						cantar = true;
-				} else if (Onfire) {
-			GetComponent<Rigidbody2D>().velocity = new Vector2 (0, 0);
 
-		}
-		else {
-			cantar = false;
-			VelocidadReal=DecisionSentido * velocidad;
-						GetComponent<Rigidbody2D>().velocity = new Vector2 (VelocidadReal, GetComponent<Rigidbody2D>().velocity.y);
-						//velocidadAcumulada = velocidadAcumulada + 0.05f;
-						if (DecisionSalto > 2) {
-				preSalto=true;
-				fuerzaSalto=fuerzaSalto0*+0.1f*DecisionSalto;
-								StartCoroutine (MyMethod ());
-				DecisionSalto=0;
-						}
-				}
+        if (1.5*distancia > anchura_pantalla / 2)
+        {
+            Debug.Log("CENTRA LA MOVIDA JUSTIN");
+            DecisionCantar = 0;
+            DecisionSalto = 0;
+            //            DecisionSentido = Mathf.Sign(-distancia);
+            //          VelocidadReal = DecisionSentido * 1.5f * velocidad;
+
+            //GetComponent<Rigidbody2D>().velocity = new Vector2(VelocidadReal, GetComponent<Rigidbody2D>().velocity.y);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(35f, GetComponent<Rigidbody2D>().velocity.y);
+        }
+
+        else if ((Time.time > n * TiempoDecision && !Onfire))
+        {
+            Debug.Log("NO CENTRES LA MOVIDA JUSTIN");
+            DecisionSentido = Random.Range(-1, 3);
+            DecisionSalto = Random.Range(0, 5);
+            DecisionCantar = Random.Range(0, 5);
+            n++;
+
+            if (DecisionCantar > 3 && !Onfire)
+            {
+                cantar = true;
+            }
+            else if (Onfire)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
+            }
+            else
+            {
+                cantar = false;
+                VelocidadReal = DecisionSentido * velocidad;
+                GetComponent<Rigidbody2D>().velocity = new Vector2(VelocidadReal, GetComponent<Rigidbody2D>().velocity.y);
+                //velocidadAcumulada = velocidadAcumulada + 0.05f;
+                if (DecisionSalto > 2)
+                {
+                    preSalto = true;
+                    fuerzaSalto = fuerzaSalto0 * +0.1f * DecisionSalto;
+                    StartCoroutine(MyMethod());
+                    DecisionSalto = 0;
+                }
+            }
+        }
 			
 	
 		animator.SetFloat ("VelxJ", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
